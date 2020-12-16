@@ -26,11 +26,20 @@
             </div>
     </header>
     <section>
-        <div class="progress">
+        <div class="indicators">
             <p id="enunciadoId">Pergunta</p>
+            <div class="aa">
+            <button onclick="selecionarResposta(0,perguntaId)">A</button>
             <a onclick="selecionarResposta(0,perguntaId)" id="resposta1"></a>
+            </div>
+            <div class="aa">
+            <button onclick="selecionarResposta(1,perguntaId)">B</button>
             <a onclick="selecionarResposta(1,perguntaId)" id="resposta2"></a>
+        </div>
+            <div class="aa">
+            <button onclick="selecionarResposta(2,perguntaId)">C</button>
             <a onclick="selecionarResposta(2,perguntaId)" id="resposta3"></a>
+        </div>
         </div>
 
         <button type="button" onclick="trocarPagina()">
@@ -77,10 +86,10 @@
             imprimir(perguntaId);
         }
     }
-    function openPageFour(){
-        localStorage.setItem("satisfacao",document.getElementById("satisfacao").value);
-        localStorage.setItem("fidelizacao",document.getElementById("fidelizacao").value);
-        window.location.href="pagefour.html"
+    function openPageFour() {
+        localStorage.setItem("satisfacao", document.getElementById("satisfacao").value);
+        localStorage.setItem("fidelizacao", document.getElementById("fidelizacao").value);
+        window.location.href = "pagefour.html"
     }
 
 </script>

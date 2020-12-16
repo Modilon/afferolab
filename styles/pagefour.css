@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, blockquote, pre,
+html, body, div, span, applet, object, iframe, blockquote, pre, p,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -24,70 +24,124 @@ ol, ul {
 
 body {
   margin: 0;
-  background: url("../assets/bg1.png") no-repeat center 100%;
+  background: url("../assets/bg4.png") no-repeat center 100%;
   width: 100%;
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5% (minmax(5rem, 1fr)) 10%;
-      grid-template-columns: 5% repeat(3, minmax(5rem, 1fr)) 10%;
+  -ms-grid-columns: 20% (minmax(2rem, 2fr)) 20%;
+      grid-template-columns: 20% repeat(1, minmax(2rem, 2fr)) 20%;
   -ms-grid-rows: 1fr 4fr 1fr;
       grid-template-rows: 1fr 4fr 1fr;
   font-family: Gilroy;
-  color: #8b8b8c;
+  color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.gamequiz {
+section {
+  height: 500px;
+  width: 100%;
+  border: 2px solid #cb2031;
+  border-radius: 25px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -ms-grid-row: 2;
   grid-row: 2/2;
   -ms-grid-column: 2;
   grid-column: 2/2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-h1 {
-  color: #783087;
-  font-weight: 900;
-  font-style: normal;
-  font-size: 48px;
-  margin-bottom: 0px;
-}
-
-bold {
-  color: #c92134;
-  font-weight: 900;
-  font-style: bold;
-  font-size: 24px;
-}
-
-p {
-  font-family: 'Gilroy';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
+  background-color: #cb2031;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 95%;
+  min-width: 95%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 4% 3%;
 }
 
 button {
-  width: 110%;
+  text-transform: uppercase;
   background: -webkit-gradient(linear, left top, right top, from(#c92134), to(#783087));
   background: linear-gradient(0.25turn, #c92134, #783087);
   color: #fdfdf7;
   border-radius: 10px;
-  border: none;
-  padding: 3% 5px;
+  border: 1px solid #ffffff;
+  padding: 10px 1%;
   font-family: 'Gilroy';
   font-weight: 900;
   font-style: normal;
-  font-size: 30px;
+  font-size: 20px;
+  margin-top: -20px;
+}
+
+.logotext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logotext img {
+  width: 150px;
+  height: 150px;
+}
+
+.logotext p {
+  margin-left: 50px;
+  width: 430px;
+  font-family: 'Gilroy';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 36px;
+  text-align: justify;
+}
+
+.progress {
+  width: 80%;
+}
+
+progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  height: 100px;
+  background-color: #cb2031;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
 }
 
 @font-face {
@@ -131,4 +185,4 @@ button {
   font-weight: 800;
   font-style: normal;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=pagefour.css.map */

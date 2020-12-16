@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Game Quiz - Conclusão</title>
+    <link rel="stylesheet" href="styles/pagefour.css">
 </head>
 <body>
-    <div id="ai">
-        <a id="teste"></a>
+    <section>
+        <div class="indicators">
+            <div class="logotext">
+            <img src="assets/Figura2.png" alt="">
+            <p>
+                Veja sua performance em cada indicador:
+            </p>
+        </div>
+        <div class="progress">
+            <div>
+                <div class="tituloeprogress">
+                    <p>Satisfação do Cliente</p>
+                    <progress id="satisfacao" value="0" max="10"></progress>
+                </div>
+                <div class="tituloeprogress">
+                    <p>Fidelização</p>
+                    <progress id="fidelizacao" value="0" max="10"></progress>
+    
+                </div>
+        </div></div>
     </div>
+    </section>
 </body>
 </html>
 <script>
-    document.getElementById("teste").innerHTML = localStorage.getItem("satisfacao")
-    document.getElementById("teste").innerHTML = localStorage.getItem("fidelização")
+    
+    document.getElementById("teste").value = localStorage.getItem("satisfacao")
+    document.getElementById("teste").value = localStorage.getItem("fidelizacao")
 </script>
