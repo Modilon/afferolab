@@ -21,21 +21,45 @@ time, mark, audio, video {
 ol, ul {
 	list-style: none;
 }
+header{
+    grid-row: 1/2;
+    grid-column: 3/3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 4%;
+    box-sizing: border-box;
+
+    img{
+        width: 130px;
+        height: 130px;
+        margin-right: 10px;
+    }
+    .progressHeader{
+        display: flex;
+        flex-direction: column;
+        width:40%;
+        height: 100px;
+        background-color: #cb2031;
+        justify-content: center;
+        border-radius: 5px;
+    }
+}
 body{
     margin: 0;
     background:url("../assets/bg2.png") no-repeat center 100%;
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 5% repeat(2,minmax(2rem,2fr)) 5%;
+    grid-template-columns: 5% repeat(2,minmax(2rem,2fr)) 3%;
     grid-template-rows: 1fr 4fr 1fr;
     font-family: Gilroy;
     color: #ffffff;
     align-items: center;
 }
 section{
-    height: 370px;
-    width: 110%;
+    height: 380px;
+    width: 105%;
     border: 2px solid #cb2031;
     border-radius: 25px;
     padding: 10px;
@@ -75,29 +99,37 @@ button{
 }
 .left{
     max-height: 95%;
-    max-width: 50%;
+    max-width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
-    font-size: 18px;
+    font-size: 20px;
    
 }
 .right{
     max-height: 95%;
-    max-width: 50%;
-    min-width: 50%;
+    max-width: 45%;
+    min-width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 0 20px 20px;
+
+    img{
+        width: 140px;
+        height: 140px;
+        margin: 10px 0;
+    }
 
 }
 p{
     margin: 0;
 }
 .progress{
-    width: 50%;
-    height: 100%;
+    width: 120px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,22 +141,8 @@ p{
 }
 .tituloeprogress{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    text-align: center;
 }
-progress{ 
--webkit-appearance: none;
-    border-radius: 5px;
-    padding: 2%;
-    height: 12px;
-
-    &::-moz-progress-bar{
-    background: blue;
-    border-radius: 10px;
-}}
-progress.last{
-    margin-top: 20px;
-    &::-moz-progress-bar{
-        background: #783087;
-    }
-    }   
+ 
 @import "fonts";

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/pagethree.css">
+    <title>Game Quiz - Questions</title>
+</head>
+<script>
+    var perguntaId = 0;
+</script>
+
+<body>
+    <header>
+        <img src="assets/arte_indicadores.png" alt="">
+        <div class="progressHeader">
+            <div class="tituloeprogress">
+                <p>Satisfação do Cliente</p>
+                <progress id="satisfacao" value="0" max="10"> 32% </progress>
+            </div>
+            <div class="tituloeprogress">
+                <p>Fidelização</p>
+                <progress id="fidelizacao" value="0" max="10"> 32% </progress>
+
+            </div>
+    </header>
+    <section>
+        <div class="progress">
+            <p id="enunciadoId">Pergunta</p>
+            <a onclick="selecionarResposta(0,perguntaId)" id="resposta1"></a>
+            <a onclick="selecionarResposta(1,perguntaId)" id="resposta2"></a>
+            <a onclick="selecionarResposta(2,perguntaId)" id="resposta3"></a>
+        </div>
+
+        <button type="button" onclick="trocarPagina()">
+            Continuar
+        </button>
+    </section>
+</body>
+
+</html>
+<script>
+    const quizUrl = "http://localhost:3000/banco_questoes";
+    let respostas = [];
+    fetch(quizUrl, {
+        method: 'get'
+    })
+        .then(function (response) {
+            response.json().then(function (data) {
+                respostas = data;
+                imprimir(perguntaId);
+                console.log(respostas);
+            });
+        })
+        .catch(function (err) {
+            console.error('Failed retrieving information', err);
+        })
+    function imprimir(indice) {
+        document.getElementById("enunciadoId").innerHTML = respostas[indice].pergunta;
+        document.getElementById("resposta1").innerHTML = respostas[indice].alternativas[0].descricao;
+        document.getElementById("resposta2").innerHTML = respostas[indice].alternativas[1].descricao;
+        document.getElementById("resposta3").innerHTML = respostas[indice].alternativas[2].descricao;
+    }
+    function selecionarResposta(respostaId, indice) {
+        const satisfacao = respostas[indice].alternativas[respostaId].impacto_indicadores.satisfacao;
+        const fidelizacao = respostas[indice].alternativas[respostaId].impacto_indicadores.fidelizacao;
+        document.getElementById("satisfacao").value += satisfacao;
+        document.getElementById("fidelizacao").value += fidelizacao;
+    }
+    function trocarPagina() {
+        perguntaId++;
+        if (respostas.length == perguntaId) {
+            openPageFour();
+        }
+        else {
+            imprimir(perguntaId);
+        }
+    }
+    function openPageFour(){
+        localStorage.setItem("satisfacao",document.getElementById("satisfacao").value);
+        localStorage.setItem("fidelizacao",document.getElementById("fidelizacao").value);
+        window.location.href="pagefour.html"
+    }
+
+</script>

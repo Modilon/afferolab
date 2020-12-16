@@ -22,6 +22,49 @@ ol, ul {
   list-style: none;
 }
 
+header {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 3;
+  grid-column: 3/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header img {
+  width: 130px;
+  height: 130px;
+  margin-right: 10px;
+}
+
+header .progressHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  height: 100px;
+  background-color: #cb2031;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+}
+
 body {
   margin: 0;
   background: url("../assets/bg2.png") no-repeat center 100%;
@@ -29,8 +72,8 @@ body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5% (minmax(2rem, 2fr))[2] 5%;
-      grid-template-columns: 5% repeat(2, minmax(2rem, 2fr)) 5%;
+  -ms-grid-columns: 5% (minmax(2rem, 2fr))[2] 3%;
+      grid-template-columns: 5% repeat(2, minmax(2rem, 2fr)) 3%;
   -ms-grid-rows: 1fr 4fr 1fr;
       grid-template-rows: 1fr 4fr 1fr;
   font-family: Gilroy;
@@ -41,8 +84,8 @@ body {
 }
 
 section {
-  height: 370px;
-  width: 110%;
+  height: 380px;
+  width: 105%;
   border: 2px solid #cb2031;
   border-radius: 25px;
   padding: 10px;
@@ -95,7 +138,7 @@ button {
 
 .left {
   max-height: 95%;
-  max-width: 50%;
+  max-width: 55%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,13 +150,13 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .right {
   max-height: 95%;
-  max-width: 50%;
-  min-width: 50%;
+  max-width: 45%;
+  min-width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,6 +167,16 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0 20px 20px;
+}
+
+.right img {
+  width: 140px;
+  height: 140px;
+  margin: 10px 0;
 }
 
 p {
@@ -131,8 +184,8 @@ p {
 }
 
 .progress {
-  width: 50%;
-  height: 100%;
+  width: 120px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,29 +206,10 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-progress {
-  -webkit-appearance: none;
-  border-radius: 5px;
-  padding: 2%;
-  height: 12px;
-}
-
-progress::-moz-progress-bar {
-  background: blue;
-  border-radius: 10px;
-}
-
-progress.last {
-  margin-top: 20px;
-}
-
-progress.last::-moz-progress-bar {
-  background: #783087;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
 }
 
 @font-face {
