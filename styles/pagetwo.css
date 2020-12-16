@@ -1,0 +1,222 @@
+html, body, div, span, applet, object, iframe, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  background: url("../assets/bg2.png") no-repeat center 100%;
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% (minmax(2rem, 2fr))[2] 5%;
+      grid-template-columns: 5% repeat(2, minmax(2rem, 2fr)) 5%;
+  -ms-grid-rows: 1fr 4fr 1fr;
+      grid-template-rows: 1fr 4fr 1fr;
+  font-family: Gilroy;
+  color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section {
+  height: 370px;
+  width: 110%;
+  border: 2px solid #cb2031;
+  border-radius: 25px;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-grid-row: 2;
+  grid-row: 2/2;
+  -ms-grid-column: 2;
+  grid-column: 2/2;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #cb2031;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 95%;
+  min-width: 95%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2% 3%;
+}
+
+button {
+  text-transform: uppercase;
+  background: -webkit-gradient(linear, left top, right top, from(#c92134), to(#783087));
+  background: linear-gradient(0.25turn, #c92134, #783087);
+  color: #fdfdf7;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  padding: 10px 1%;
+  font-family: 'Gilroy';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 20px;
+  margin-top: -20px;
+}
+
+.left {
+  max-height: 95%;
+  max-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  font-size: 18px;
+}
+
+.right {
+  max-height: 95%;
+  max-width: 50%;
+  min-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+.progress {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3%;
+  width: 80%;
+  border-radius: 5px;
+}
+
+.tituloeprogress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+progress {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  padding: 2%;
+  height: 12px;
+}
+
+progress::-moz-progress-bar {
+  background: blue;
+  border-radius: 10px;
+}
+
+progress.last {
+  margin-top: 20px;
+}
+
+progress.last::-moz-progress-bar {
+  background: #783087;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../assets/fonts/Gilroy-Black.woff2") format("woff2"), url("../assets/fonts/Gilroy-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-RegularItalic';
+  src: url("../assets/fonts/Gilroy-RegularItalic.woff2") format("woff2"), url("../assets/fonts/Gilroy-RegularItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../assets/fonts/Gilroy-BlackItalic.woff2") format("woff2"), url("../assets/fonts/Gilroy-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../assets/fonts/Gilroy-Regular.woff2") format("woff2"), url("../assets/fonts/Gilroy-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../assets/fonts/Gilroy-Light.woff2") format("woff2"), url("../assets/fonts/Gilroy-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../assets/fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../assets/fonts/Gilroy-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+/*# sourceMappingURL=pagetwo.css.map */
