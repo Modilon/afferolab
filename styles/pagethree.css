@@ -77,7 +77,7 @@ body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% (minmax(2rem, 2fr))[1] 20%;
+  -ms-grid-columns: 20% (minmax(2rem, 2fr))20%;
       grid-template-columns: 20% repeat(1, minmax(2rem, 2fr)) 20%;
   -ms-grid-rows: 1fr 4fr 1fr;
       grid-template-rows: 1fr 4fr 1fr;
