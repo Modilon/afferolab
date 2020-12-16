@@ -37,11 +37,16 @@ ol, ul {
     .progressHeader{
         display: flex;
         flex-direction: column;
-        width:350px;
+        width: 287px;
         height: 100px;
         background-color: #cb2031;
         justify-content: center;
         border-radius: 5px;
+        padding: 10px;
+
+        p{
+            margin-right: 10px;
+        }
     }
 }
 body{
@@ -98,6 +103,13 @@ section{
         color: gray;
     }
 }
+.tituloeprogress{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: 30px;
+    margin-top: 10px
+}
 a{
     font-family: 'Gilroy';
     font-weight: normal;
@@ -119,4 +131,4 @@ a:hover{
 .aa{
     display: flex;
 }
-@import 'fonts;'
+@import 'fonts';

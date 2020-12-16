@@ -29,7 +29,7 @@ body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% (minmax(2rem, 2fr)) 20%;
+  -ms-grid-columns: 20% (minmax(2rem, 2fr))[1] 20%;
       grid-template-columns: 20% repeat(1, minmax(2rem, 2fr)) 20%;
   -ms-grid-rows: 1fr 4fr 1fr;
       grid-template-rows: 1fr 4fr 1fr;
@@ -123,20 +123,24 @@ button {
   text-align: justify;
 }
 
+.tituloeprogress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+  width: 80%;
+}
+
 .progress {
   width: 80%;
 }
 
 progress {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   width: 350px;
-  height: 100px;
+  height: 50px;
   background-color: #cb2031;
   -webkit-box-pack: center;
       -ms-flex-pack: center;

@@ -34,6 +34,8 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  margin-top: -2%;
+  margin-right: -6%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -63,6 +65,7 @@ header .progressHeader {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 5px;
+  padding: 10px;
 }
 
 body {
@@ -72,7 +75,7 @@ body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5% (minmax(2rem, 2fr))3%;
+  -ms-grid-columns: 5% (minmax(2rem, 2fr))[2] 3%;
       grid-template-columns: 5% repeat(2, minmax(2rem, 2fr)) 3%;
   -ms-grid-rows: 1fr 4fr 1fr;
       grid-template-rows: 1fr 4fr 1fr;
@@ -210,6 +213,8 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: center;
+  height: 30px;
+  margin-top: 10px;
 }
 
 @font-face {

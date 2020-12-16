@@ -56,13 +56,18 @@ header .progressHeader {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 350px;
+  width: 287px;
   height: 100px;
   background-color: #cb2031;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 5px;
+  padding: 10px;
+}
+
+header .progressHeader p {
+  margin-right: 10px;
 }
 
 body {
@@ -72,7 +77,7 @@ body {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% (minmax(2rem, 2fr)) 20%;
+  -ms-grid-columns: 20% (minmax(2rem, 2fr))[1] 20%;
       grid-template-columns: 20% repeat(1, minmax(2rem, 2fr)) 20%;
   -ms-grid-rows: 1fr 4fr 1fr;
       grid-template-rows: 1fr 4fr 1fr;
@@ -138,6 +143,45 @@ section .indicators {
   padding: 2% 3%;
   color: gray;
 }
+
+.tituloeprogress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  height: 30px;
+  margin-top: 10px;
+}
+
+a {
+  font-family: 'Gilroy';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: initial;
+}
+
+a button {
+  background-color: #fff;
+  color: purple;
+  border: purple solid 1px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.aa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @font-face {
   font-family: 'Gilroy';
   src: url("../assets/fonts/Gilroy-Black.woff2") format("woff2"), url("../assets/fonts/Gilroy-Black.woff") format("woff");

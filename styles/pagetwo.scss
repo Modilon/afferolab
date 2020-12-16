@@ -26,6 +26,8 @@ header{
     grid-column: 3/3;
     display: flex;
     justify-content: end;
+    margin-top: -2%;
+    margin-right: -6%;
     align-items: center;
     padding: 4%;
     box-sizing: border-box;
@@ -43,6 +45,7 @@ header{
         background-color: #cb2031;
         justify-content: center;
         border-radius: 5px;
+        padding: 10px;
     }
 }
 body{
@@ -143,6 +146,8 @@ p{
     display: flex;
     justify-content: space-between;
     text-align: center;
+    height: 30px;
+    margin-top: 10px
 }
  
 @import "fonts";
